@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="warbber">
+        <div>
+            <div class="topData">
+                <div id="data">Name: <input type="text" style="width:190px" placeholder="Enter your name here..."
+                        id="name"></div>
+                <div id="data">Dojo Location: <select name="loction" id="loction" style="width:200px">
+                        <option value="">Saudi Arabia</option>
+                        <option value="">Kuwait</option>
+                        <option value="">Dubai</option>
+                        <option value="">USA</option>
+                    </select></div>
+                <div id="data">Favorite Language:
+                    <select name="Language" id="Languages" style="width:200px" ">
+                        <option value=" Language">c++</option>
+                        <option value="Language">c#</option>
+                        <option value="Language">python</option>
+                        <option value="Language">Java</option>
+                        <option value="Language">Javascript</option>
+                </div>
+                </select>
+            </div>
+            <div class="texterea">
+                <p>Comment (optional):</p>
+                <input type="text">
+            </div>
+            <div class="submitB">
+                <a href="/result" class="submit">Submit</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
