@@ -12,29 +12,29 @@
 
 <body>
     <div class="warbber">
-        <form action="/result">
+        <form action="/result" method="post">
+            {%csrf_token}
             <div class="topData">
-                <div id="data">Name: <input type="text" style="width:190px" placeholder="Enter your name here..."
-                        id="name"></div>
+                <div id="data">Name: <input type="text" style="width:190px" placeholder="Enter your name here..." name="name" id="name"></div>
                 <div id="data">Dojo Location: <select name="loction" id="loction" style="width:200px">
-                        <option value="">Saudi Arabia</option>
-                        <option value="">Kuwait</option>
-                        <option value="">Dubai</option>
-                        <option value="">USA</option>
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="Kuwait">Kuwait</option>
+                        <option value="Dubai">Dubai</option>
+                        <option value="USA">USA</option>
                     </select></div>
                 <div id="data">Favorite Language:
                     <select name="Language" id="Languages" style="width:200px" ">
-                        <option value=" Language">c++</option>
-                        <option value="Language">c#</option>
-                        <option value="Language">python</option>
-                        <option value="Language">Java</option>
-                        <option value="Language">Javascript</option>
+                        <option value=" c++">c++</option>
+                        <option value="c#">c#</option>
+                        <option value="python">python</option>
+                        <option value="Java">Java</option>
+                        <option value="Javascript">Javascript</option>
                 </div>
                 </select>
             </div>
-            <div class="texterea">
+            <div >
                 <p>Comment (optional):</p>
-                <input type="text">
+                <textarea name="comment" placeholder="Write comment here..." class="texterea"></textarea>
             </div>
             <div class="submitB">
                 <a href="/result" class="submit">Submit</a>
