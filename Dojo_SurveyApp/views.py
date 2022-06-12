@@ -5,6 +5,10 @@ def index(request):
     return render(request, "index.html")
 
 def result(request):
-    context = {'name':name}
-    return render(request,'result.index',context)
+    context = {'name':request.POST["name"],
+    'location':request.POST['loction'],
+    'favlang':request.POST['Language'],
+    'comment':request.POST['comment']
+    }
+    return render(request,'result.html',context)
 
